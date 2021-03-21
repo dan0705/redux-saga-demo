@@ -22,15 +22,6 @@ button:hover {
   background-color: palevioletred;
 }
 
-@keyframes spin {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
 .result {
   display: flex;
   align-items: center;
@@ -39,22 +30,4 @@ button:hover {
 .result h1 {
   /* display: inline-block; */
   margin-right: 20px;
-}
-
-.loading {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid transparent;
-  border-top: 2px solid blue;
-  border-right: 2px solid blue;
-
-  border-radius: 50%;
-  animation: spin 0.4s linear infinite;
-
-  /*   animation-name: spin;
-  animation-duration: 0.2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;*/
 }

@@ -1,0 +1,8 @@
+.interactArea {
+  display: flex;
+  align-items: center;
+
+  & input + div {
+    margin-left: 10px;
+  }
+}

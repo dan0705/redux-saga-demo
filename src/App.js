@@ -1,26 +1,21 @@
 import React from 'react'
-import styles from './App.module.css'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+// import styles from './App.module.css'
 
-import Counter from './Counter/index.js'
-
-import COUNT_ACTION from './action'
+import NotFound from './pages/NotFound'
+import Count from './pages/Counter'
+import Data from './pages/Data'
 
 // App is a container for dispatching actions from Counter
-function App({ store, data }) {
+function App() {
   return (
-    <div className={styles.app}>
-      <Counter
-        data={data}
-        onIncrementAsync={() =>
-          store.dispatch({ type: COUNT_ACTION.INCREMENT_ASYNC })
-        }
-        onIncrement={() => store.dispatch({ type: COUNT_ACTION.INCREMENT })}
-        onDecrement={() => store.dispatch({ type: COUNT_ACTION.DECREMENT })}
-        onDecrementAsync={() =>
-          store.dispatch({ type: COUNT_ACTION.DECREMENT_ASYNC })
-        }
-      />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/data" component={Data} />
+        <Route exact path="/count" component={Count} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   )
 }
 
