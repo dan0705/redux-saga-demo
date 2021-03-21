@@ -1,6 +1,11 @@
 ## Created by create-react-app
 
-### Redux Saga Count Example
+### The easiest way to know about
+
+- Redux
+- Redux hook
+- Saga
+- ...
 
 ### To run
 
